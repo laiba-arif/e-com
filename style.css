@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600&family=Nunito:wght@200;300;400;500;600&family=Poppins&display=swap');
+
+:root{
+
+      --green:#27ae60;
+      --black:#192a56;
+      --light-color:rgb(102, 102, 102,.2);
+      --box-shadow:0 .5rem 1.5rem rgba(0,0,0,0.1);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito',sans-serif;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+a{
+    color:black;
+}
+.fa-bag-shopping:hover{
+   color:#3edd80;
+}
+#logo{
+    margin-left: 3rem;
+}
+nav{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 5rem;  
+    position: fixed;
+    width:100%;
+    z-index: 99999;
+    background:white;
+    box-shadow: var(--box-shadow);
+    top:0;
+    left:0;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 25px;
+    font-weight: 600;
+    position: relative;
+
+}
+ul li a.active,
+ul li a:hover{
+    color:var(--green)
+}
+ul li a::after{
+    content: ' ';
+    height:3px;
+    width:0;
+    position: absolute;
+    background:var(--green);
+    bottom:-6px;
+    left:0;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+}
+ul li a:hover::after{
+    width:70%
+}
+ul li a.active::after{
+   width:50%;
+   
+}
+/* -----------------------------banner-------------------------------------------- */
+.banner{
+    background-image: url(img/hero4.png);
+    background-size: cover;
+    height:100vh;
+    width:100%;
+    top:25%;
+    right:5%;
+   
+}
+.banner-txt{
+    padding-left: 5rem;
+    padding-top: 8rem;
+}
+.banner-txt span{
+    color:var(--green)
+}
+.banner-txt button{
+    background-image: url(img/button.png);
+    background-color: transparent;
+    border:0;
+    padding:10px 55px ;
+    margin-top: 5px;
+    color:var(--green)
+}
+.banner-txt p{
+    margin-top: 5px;
+}
+/* ------------------------------------feature--------------------------------------------- */
+.feature{
+    display: flex;
+    margin:5rem  20px
+}
+.card button{
+    padding: 5px;
+    margin:1rem  3px;
+}
+.card{
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-left:1rem
+}
+   
+/* -------------------------------products--------------------------------------------- */
+#products h1{
+   text-align: center;
+   font-weight:900;
+   letter-spacing: .30rem;
+   margin: 20px;
+}
+#pro-collection{
+    text-align: center;
+}
+.pro-card img{
+    height:180px;
+    /* width:230px; */
+    width:100%;
+}
+.pro-product{
+    display: flex;
+    margin:4rem;
+    flex-wrap: wrap;
+}
+.pro-card{
+    margin-left:1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    border-radius:5px;
+    box-shadow: var(--box-shadow);
+    padding: 0 10px;
+    padding-bottom: 5px; 
+ }
+ .pro-card:hover,
+ .pro-cards:hover{ 
+    background:rgba(117, 106, 106, 0.1);
+ }
+.stars{
+    color:rgb(248, 189, 79);
+    margin-top: .30rem;
+}
+.card-bottom{
+    display: flex;
+   justify-content: space-between;
+   font-weight: 900;
+}
+.cart{
+    color:var(--green);
+    border-radius: 50%;
+    background:rgb(0, 0, 0,.1);
+    padding: .75rem;
+}
+.cart:hover{
+    color:white;
+    background: var(--green);
+}
+.dollar{
+    margin-top:1rem;
+}
+.pro-txt{
+    padding:30px;
+}
+/* ----------------------------------------service--------------------------------------------------------------- */
+.service{
+    background-image: url(img/banner/b2.jpg);
+    height:280px;
+    background-size: cover;
+    margin: 4rem 0;
+    color:white;
+    text-align: center;
+    padding: 4rem;
+}
+.service span{
+    color:rgb(247, 46, 80)
+}
+.service h1{
+    margin-top: 1rem;
+}
+
+.service button{
+    padding:1rem 2rem;
+    margin-top:.75rem;
+
+}
+/* ---------------------------------------------new arrival---------------------------------------------------------------- */
+.pro-cards{
+    margin-left:1rem;
+    margin-top: 1rem;
+    text-align: left;
+    border-radius:10px;
+    box-shadow: var(--box-shadow);
+    padding:10px;
+    padding-bottom: 5px;
+    border: 1px solid rgb(0, 0, 0,0.5);
+}
+.pro-cards img{
+    height:180px;
+    /* width:230px; */
+    width:100%;
+}
+/* -------------------------------------------------offers------------------------------------------------------------------------------ */
+.offers{
+    display: flex;
+    margin: 4rem 3rem;
+    position: relative;
+}
+.offers img{
+    height:300px;
+    margin-left: 2rem;
+}
+.offer-txt p{
+    font-weight: 300;
+}
+.offer-txt{
+    position :absolute;
+    bottom:6rem;
+    margin-left:4rem;
+    color:white; 
+}
+.offer-txt h1{
+    font-weight:900;
+}
+.offer-txt button:hover{
+    background:var(--green);
+}
+.offer-txt button{
+    color:white;
+    padding:.50rem 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: .75rem;
+    outline: none;
+    border:1px solid rgb(244, 235, 235);
+    background: transparent;
+}
+
+/* -------------------------------------------------------offer card-------------------------------------- */
+#offer-card{
+    display: flex;
+    margin:0 4rem;
+    position: relative;
+}
+#offer-card img{
+    height:180px;
+    margin-left: 2rem;
+    margin-top:-2rem;
+}
+
+.offers-txt{
+    position: absolute;
+    bottom:4rem;
+    margin-left: 3rem;
+    color:white;
+    font-weight: 800;
+}
+.offers-txt p{
+    color:rgb(253, 44, 79)
+}
+/* ---------------------------------sign up------------------------------------------------- */
+.sign-up{
+    height:200px;
+    background:rgb(23, 23, 87);
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-weight:900;
+    padding:3rem 0 ;
+}
+.sign-up-txt{
+    padding-left: 2rem;
+}
+.sign-up-txt h1{
+    font-size: 4rem;
+}
+.sign-up-txt p{
+    color:rgb(255, 255, 255,.5);
+    margin-top: .50rem;
+}
+.sign-up-mail{
+    background: rgb(250, 250, 250,);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+    width:40%;
+    height:4rem;
+    margin-right: 2rem;
+}
+.sign{
+    flex: 1;
+    outline: none; 
+    border: none;
+    height:3rem;
+    width:40%;
+    padding: 1rem;
+}
+.sign-up-mail button{
+    color:white;
+    background-color:var(--green);
+    height:3rem;
+    border: 0;
+    outline: 0;
+    padding:.30rem 1rem;
+
+}
+.sign-up-txt span{
+    color:rgb(255, 225, 0)
+}
+/* -----------------------------------------footer-------------------------------------------- */
+.footer{
+    display: flex;
+    padding: 1rem 2rem 1rem ;
+}
+.footer-txt{
+    margin-left: 3rem;
+    margin-top: .25rem;
+}
+.footer-txt h3{
+    font-weight:900;
+    margin-bottom:1rem;
+}
+.footer-txt p{
+    margin-top: .50rem;
+}
+.install{
+    border:1px solid black;
+}
+.footer-txt h2{
+    margin-top: 1rem;
+}
+.footer-txt span{
+    font-weight: 600;
+}
+.footer i{
+    padding: .75rem;
+    border:1px solid rgb(209, 204, 204);
+    color:var(--green);
+    margin-left: .35rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.footer i:hover{
+    color:white;
+    background: var(--green);
+}
+.foot{
+    text-align: center;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+/* ---------------------------------------shop section------------------------------------------------------------- */
+#shop{
+    background-image: url(img/banner/b1.jpg);
+    height:250px;
+    margin-top: 3.5rem;
+}
+#shops{
+    background-image: url(img/banner/b19.jpg);
+    height:250px;
+    margin-top: 3.5rem;
+    background-size: cover;
+}
+#shopp{
+    background-image: url(img/about/banner.png);
+    height:250px;
+    margin-top: 3.5rem;
+    background-size: cover;
+}
+#shoppp{
+    background-image: url(img/about/banner.png);
+    height:250px;
+    margin-top: 3.5rem;
+    background-size: cover;
+}
+.shop-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    min-height:45vh;
+    
+}
+.shop-txt p{
+    color:rgb(255, 255, 255,.6);
+    font-size: small;
+    margin-top: .75rem;
+}
+/* --------------------------------------s-products--------------------------------------------------------------- */
+.pro-detail{
+    margin:5rem ;
+    height:600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-sec{
+    padding: 2rem;
+}
+#l-img {
+    width:450px;
+    height:450px;
+    margin-top: 1rem;
+}
+.img-sec{
+    margin-top: 7rem;
+}
+.s-imgs-grp{
+    width:450px;
+    height:180px;
+    display: flex;
+}
+.s-img img{
+    height:100px;
+    width:106px;
+    background-size: cover;
+    margin-left:.30rem;
+}
+#p-detail{
+    text-align: justify;
+    font-weight: 300;
+    color:rgb(115, 113, 113);
+    line-height: 1.5rem;
+}
+.content-sec h4, h2,h3{
+
+    margin:.75rem 0;
+    font-weight: bolder;
+}
+.btnnn{
+    padding: .75rem 2rem;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:1rem;
+    background-color: #27ae60;
+    cursor: pointer;
+    margin: 0.4rem;
+}
+#num{
+    padding:.40rem;
+    width:4rem;
+}
+#select-box{
+    width:15rem;
+    padding:.40rem;
+    margin-bottom: 1rem;
+}
+/* -----------------------------------------contact--------------------------------------- */
+.location{
+    height:500px;
+    /* background: red; */
+    margin-top:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    
+}
+.loc-info{
+    padding: 3rem;
+}
+.loc-info h4{
+   padding: 1rem 0;
+   font-weight: bolder;
+}
+.map-info>iframe{
+    height:400px;
+    width:600px;
+    margin-right: 4rem;
+}
+#contct-info i{
+    margin-right: 0.75rem;
+}
+#contct-info p{
+    padding: 0.50rem;
+}
+/* -------------------------------------#contact-us----------------------------------------------- */
+#contact-us{
+    background: rgba(166, 166, 166, 0.1);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+#contact-us input{
+    border: .5px solid grey;
+    display: block;
+    padding:.70rem;
+    width:35rem;
+    margin:1rem 0;
+    outline: none;
+}
+#contact-us textarea{
+    width:35rem;
+    padding: 0.70rem;
+    height:200px;
+    border: .5px solid grey;
+    outline: none;
+
+}
+/* ---------------------person info---------------------- */
+.person-info{
+    margin-right: 5rem;
+   
+}
+.persons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.person-img{
+    margin-right:1rem;
+    margin-top:1rem;
+}
+.person-info p{
+    color:grey
+}
+.person-info h3{
+    margin-top: 2rem;
+    padding: 0;
+}
+/* -----------------------------------------about-------------------------------------------------- */
+#about{
+    height:400px;
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+}
+#img-abo{
+    height:350px;
+    width:550px;
+    background-size:cover;
+    margin: 2rem;
+}
+#my-txt{
+    padding: 2rem;
+}
+#my-txt p{
+  text-align: justify;
+}
+#my-txt h1{
+    margin-bottom: 0.5rem;
+}
+marquee{
+    background: rgb(191, 190, 190);
+    padding: 0.40rem;
+}
+/* ------------------------------------app-sec---------------------------------------------------- */
+#app-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+#video>video{
+    height:400px;
+    width:700px;
+    
+}
+#video{
+    margin-top: 2rem;
+}
+#app{
+    color:blue;
+    text-decoration: underline 1px solid blue;
+}
+/* -----------------------------------------blog sec-------------------------------------------------------------- */
+.blog{
+    height:300px;
+    /* background: rgb(248, 221, 221); */
+    display: flex;
+    justify-content: center;
+    margin:1rem 4rem;
+   
+}
+.blog-img img{
+   height:200px;
+   width:400px;
+   background-size: cover;
+   margin-top: 1.85rem;
+
+}
+.blog-txt h4:hover{
+    color:#27ae60
+}
+.blog-txt h4{
+     margin-top: 0.5rem;
+     font-weight:900;
+}
+.blog-sc-1{
+    position: relative;
+    /* background: #ce7070; */
+}
+.blog-txt{
+    padding-left: 2rem;
+    padding-top:3rem;
+}
+.blog h1{
+    color:rgb(175, 175, 175);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1
+}
+/* ----------------------------------------carts data------------------------------------------------------------ */
+.carts-storage{
+    margin: 3rem 4rem;
+    /* background: rgb(255, 212, 212); */
+    text-align: center;
+
+}
+td input{
+    width:50px;
+   padding-left: 0.5rem;
+}
+td img{
+    height:70px;
+    width:70px
+}
+.carts-storage table thead td{
+   font-weight: bolder;
+   /* background: rgba(217, 39, 39); */
+   padding: 1rem 0;
+   border-bottom: 1px solid grey;
+   border-top: 1px solid grey;
+}
+.carts-storage table{
+    border-collapse: collapse;
+}
+
+.carts-storage table thead{
+    padding-bottom:1rem;
+    border-top:1px solid grey;
+    border-bottom: 1px solid grey;
+   
+}
+.carts-storage table tbody td{
+    padding-top:1rem;
+    /* background: rgb(227, 99, 142); */
+}
+/* ----------------------------------------coupon----------------------------------------------------------- */
+#apply{
+    height:300px;
+    margin:4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.coupon input{
+    width:18rem;
+    padding: .80rem;
+    outline:0;
+
+}
+.subtotal{
+    border:1px solid grey;
+    padding: .20rem 2rem;
+    width:50vw;
+    margin-top: 2rem;
+}
+#sub{
+    /* border:1px solid grey; */
+    padding: .30rem;
+}
+#sub tr{
+    border-top:1px solid grey;
+    border-bottom:1px solid grey;
+    padding: 0.5rem;
+    
+}
+#sub table{
+    border-collapse: collapse;
+}
+#sub td{
+    width:25vw;
+    padding:.40rem;
+    border: .5px solid grey;
+}
